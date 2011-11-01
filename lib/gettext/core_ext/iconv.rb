@@ -15,7 +15,7 @@
 =end
 
 begin
-  raise LoadError
+  old_verbose, $VERBOSE = $VERBOSE, nil # hide deprecation on 1.9.3
   require 'iconv.so'
 rescue LoadError
   # Pseudo Iconv class
