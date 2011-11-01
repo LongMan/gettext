@@ -15,6 +15,7 @@
 =end
 
 begin
+  raise LoadError
   require 'iconv.so'
 rescue LoadError
   # Pseudo Iconv class
